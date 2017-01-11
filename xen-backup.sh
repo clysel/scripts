@@ -164,14 +164,14 @@ log "Starting $(hostname) $0 $argument"
 
 case $argument in
 	linux )
-		hosts="1/root@xen-cisco01,1/root@xen-cisco03,1/root@xen-cisco04"
-		hosts_ncpu="$client_job/root@xen-cisco01,$client_job/root@xen-cisco03,$client_job/root@xen-cisco04"
+		hosts="1/root@xenlinux1,1/root@xenlinux2,1/root@xenlinux3"
+		hosts_ncpu="$client_job/root@xenlinux1,$client_job/root@xenlinux2,$client_job/root@xenlinux3"
     		backup_pool linux
 		;;
 
 	windows )
-		hosts="1/root@winxen1,1/root@winxen2,1/root@winxen3"
-		hosts_ncpu="$client_job/root@winxen1,$client_job/root@winxen2,$client_job/root@winxen3"
+		hosts="1/root@xenwin1/root@xenwin22,1/root@xenwin3"
+		hosts_ncpu="$client_job/root@xenwin1,$client_job/root@xenwin2,$client_job/root@xenwin3"
         	backup_pool windows
 		;;
 	xen? )
